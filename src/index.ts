@@ -21,11 +21,12 @@ fastify.post("/users/create", users_create)
 ;(async () => {
   try {
     const port = 3000
-    console.info(`Starting script on port ${port}`)
+    console.info(`Starting server on port ${port}`)
 
     // Start server
     await fastify.listen(port, "0.0.0.0")
   } catch (err) {
+    console.error(err)
     fastify.log.error(err)
     process.exit(1)
   }

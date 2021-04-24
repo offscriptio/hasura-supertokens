@@ -5,7 +5,7 @@ ENV NODE_ENV production
 ENV SUPERTOKENS_DOMAIN=https://something-goes-here-us-east-1.aws.supertokens.io:3567
 ENV SUPERTOKENS_API_KEY=your-super-secret-supertokens-key
 ENV HASURA_GRAPHQL_ADMIN_SECRET=your-super-secret-key
-ENV HASURA_GRAPHQL_URL=https://offscript-dev.hasura.app/v1/graphql
+ENV HASURA_GRAPHQL_URL=https://your-app.hasura.app/v1/graphql
 ENV SERVICES_ROOT=https://this-service-url.com
 
 # Create app directory
@@ -15,7 +15,6 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 COPY yarn.lock ./
 COPY yarnclean ./.yarnclean
-COPY .npmrc ./.npmrc
 
 RUN yarn install --frozen-lockfile && yarn autoclean --force
 

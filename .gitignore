@@ -1,6 +1,8 @@
-.env
-node_modules
 .build
-yarn-error.log
 .DS_Store
+.env
 .eslintcache
+.npmrc
+.yarnrc
+node_modules
+yarn-error.log
