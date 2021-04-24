@@ -6,7 +6,7 @@ This is an ongoing project and implementation used by [Off Script](https://offsc
 
 ## How to use
 
-You can run this either compiling and running locally or you can just use public docker image.
+You can run this either compiling and running locally or you can just use our [public docker image](https://hub.docker.com/r/offscript/hasura-supertokens).
 Make sure you have the correct environment variables in place.
 
 ## How to set up on Hasura
