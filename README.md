@@ -1,6 +1,6 @@
 # hasura-supertokens
 
-Open source implementation of Supertokens with Hasura.
+Open source implementation of [Supertokens](https://supertokens.io/) with [Hasura](https://hasura.io/).
 
 This is an ongoing project and implementation used by [Off Script](https://offscript.io).
 
