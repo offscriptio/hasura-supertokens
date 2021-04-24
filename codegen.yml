@@ -1,0 +1,24 @@
+overwrite: true
+schema:
+  - ${HASURA_GRAPHQL_URL}:
+      headers:
+        x-hasura-admin-secret: ${HASURA_GRAPHQL_ADMIN_SECRET}
+        x-hasura-user-role: services
+documents: "lib/graphql/**/*.graphql"
+generates:
+  lib/@types/graphql.d.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+    config:
+      scalars:
+        json: object
+        jsonb: object
+        timestamptz: string
+        timestamp: string
+        bigint: number
+        uuid: string
+        date: string
+        numeric: number
+      skipTypename: true
+      withComponent: false

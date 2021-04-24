@@ -1,0 +1,5 @@
+query GetUser($id: String!) {
+  users(where: { id: { _eq: $id } }) {
+    role
+  }
+}

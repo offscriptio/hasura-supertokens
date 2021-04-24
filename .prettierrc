@@ -1,0 +1,15 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "editor.formatOnSave": false,
+  "semi": false,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "quoteProps": "consistent",
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  }
+}

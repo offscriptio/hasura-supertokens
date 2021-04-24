@@ -1,0 +1,9 @@
+mutation InsertUser($email: String!, $id: String!) {
+  insert_users_one(
+    object: { email: $email, id: $id }
+    on_conflict: { constraint: users_email_key, update_columns: id }
+  ) {
+    email
+    id
+  }
+}

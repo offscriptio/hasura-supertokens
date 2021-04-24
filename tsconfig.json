@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "incremental": true,
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": ".build",
+    "paths": {
+      "@libs/*": ["lib/*"]
+    },
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es2018",
+    "skipLibCheck": true,
+    "watch": false
+  },
+  "exclude": [".vscode/**/*", "node_modules/**/*"],
+  "include": ["./**/*.ts"]
+}

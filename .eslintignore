@@ -1,0 +1,6 @@
+.env
+codegen.yml
+node_modules
+*.config.js
+*.d.ts
+**/*.js
