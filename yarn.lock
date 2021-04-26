@@ -2092,9 +2092,9 @@ es-to-primitive@^1.2.1:
     is-symbol "^1.0.2"
 
 esbuild@^0.11.11:
-  version "0.11.13"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.13.tgz#f61bb9b62f1ea5b749537db78fafb11c9cc0e096"
-  integrity sha512-d5coY4dd4rVWle0WzrR8+32ukKtZroVJ/wJzOwbBEmoSFB/H3QME0l+3IAN5Sf3LtuoUSivdv1/b5rD7OykXeg==
+  version "0.11.15"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.15.tgz#d92250e1755294f84bc7a83ed191e60baadf7b6a"
+  integrity sha512-Hh40byWZZgYbiLhcoOWiOUIy8yUYQeCEA4F9feWytToD2jGfJ1X4VPf5dsqj6vRL29H3YmFqZsxIJa5q0ifB3g==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -2107,9 +2107,9 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
 eslint-config-prettier@^8.2.0:
-  version "8.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.2.0.tgz#78de77d63bca8e9e59dae75a614b5299925bb7b3"
-  integrity sha512-dWV9EVeSo2qodOPi1iBYU/x6F6diHv8uujxbxr77xExs3zTAlNXvVZKiyLsQGNz7yPV2K49JY5WjPzNIuDc2Bw==
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
+  integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
 
 eslint-import-resolver-node@^0.3.4:
   version "0.3.4"
@@ -2501,9 +2501,9 @@ flatted@^3.1.0:
   integrity sha512-zAoAQiudy+r5SvnSw3KJy5os/oRJYHzrzja/tBDqrZtNhUw8bt6y8OBzMWcjWr+8liV8Eb6yOhw8WZ7VFZ5ZzA==
 
 follow-redirects@^1.10.0:
-  version "1.13.3"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.3.tgz#e5598ad50174c1bc4e872301e82ac2cd97f90267"
-  integrity sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.0.tgz#f5d260f95c5f8c105894491feee5dc8993b402fe"
+  integrity sha512-0vRwd7RKQBTt+mgu87mtYeofLFZpTas2S9zY+jIeuLJMNvudIgF52nr19q40HOwH5RrhWIPuj9puybzSJiRrVg==
 
 form-data@4.0.0:
   version "4.0.0"
@@ -4717,9 +4717,9 @@ strip-json-comments@~2.0.1:
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
 supertokens-node@^4.2.0:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-4.3.1.tgz#13a28006dab7dd691bf5dbce7b9460d3c1bb287a"
-  integrity sha512-szNUzCmcJJCAUiSTRfIZ/yLKRJdG6xGz+/eEUSWFr+6h4pwSlxrW0t6D52Grfb3UaVPPuKoSg8ujlW7bXu7x8A==
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-4.3.3.tgz#7f1e3b71f918afdf87bb823e17af7d17138def3c"
+  integrity sha512-Ej46MZS9u/rXYaw+78dLMw4oKRLwPHutUd5qoJDkMp+8y3GzgLC9jc9nOM7ih1eEOPop0AD97PE4T08SGLcGEw==
   dependencies:
     axios "0.21.1"
     body-parser "1.19.0"
