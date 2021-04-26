@@ -20,6 +20,7 @@ RUN yarn install --frozen-lockfile && yarn autoclean --force
 
 # Bundle app source
 COPY .build ./
+COPY lib ./lib
 
 EXPOSE 3000
 CMD [ "node", "index.js" ]
