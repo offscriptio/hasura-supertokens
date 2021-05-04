@@ -4717,9 +4717,9 @@ strip-json-comments@~2.0.1:
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
 supertokens-node@^4.2.0:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-4.3.3.tgz#7f1e3b71f918afdf87bb823e17af7d17138def3c"
-  integrity sha512-Ej46MZS9u/rXYaw+78dLMw4oKRLwPHutUd5qoJDkMp+8y3GzgLC9jc9nOM7ih1eEOPop0AD97PE4T08SGLcGEw==
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-4.4.1.tgz#273e64d3701c3dabe591933a3b04f763d4065921"
+  integrity sha512-7fDbQIhI43wbqMabLreQyanhYJvKtJnmB4aPGMxxuFqOt4824Rg66qgE2uRgfJ2WIpApnZaLh47i47VshrVVVg==
   dependencies:
     axios "0.21.1"
     body-parser "1.19.0"
