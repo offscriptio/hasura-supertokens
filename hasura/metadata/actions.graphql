@@ -1,0 +1,15 @@
+type Mutation {
+  CreateUser (
+    id: uuid
+    email: String
+    role: String
+  ): CreateUserOutput
+}
+
+
+
+
+type CreateUserOutput {
+  id : uuid
+}
+

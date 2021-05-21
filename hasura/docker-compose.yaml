@@ -1,0 +1,45 @@
+version: "3.6"
+services:
+  postgres:
+    image: postgres:12
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - "5432:5432"
+  graphql-engine:
+    image: hasura/graphql-engine:v2.0.0-alpha.10
+    ports:
+      - "8080:8080"
+    depends_on:
+      - "postgres"
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:password@postgres:5432/postgres
+      ## enable the console served by server
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
+      ## enable debugging mode. It is recommended to disable this in production
+      HASURA_GRAPHQL_DEV_MODE: "true"
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      ## uncomment next line to set an admin secret
+      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_AUTH_HOOK: localhost:3000
+      HASURA_GRAPHQL_AUTH_HOOK_MODE: POST
+      AUTH_URL: http://localhost:3000
+  hasura-supertokens:
+    image: offscript/hasura-supertokens:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "graphql-engine"
+    restart: always
+    environment:
+      SUPERTOKENS_DOMAIN: https://somethinghere-region.aws.supertokens.io:3572
+      SUPERTOKENS_API_KEY: keepthissafe
+      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_URL: http://localhost:8080/v1/graphql
+      SERVICES_ROOT: http://localhost:3000
+volumes:
+  db_data:

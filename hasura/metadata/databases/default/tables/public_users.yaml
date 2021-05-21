@@ -1,0 +1,26 @@
+table:
+  name: users
+  schema: public
+select_permissions:
+- permission:
+    columns:
+    - email
+    - id
+    - role
+    - created_at
+    - updated_at
+    filter:
+      id:
+        _eq: X-Hasura-User-Id
+  role: knight
+- permission:
+    columns:
+    - email
+    - id
+    - role
+    - created_at
+    - updated_at
+    filter:
+      id:
+        _eq: X-Hasura-User-Id
+  role: pawn

@@ -1,0 +1,11 @@
+actions:
+- name: CreateUser
+  definition:
+    kind: synchronous
+    handler: '{{AUTH_URL}}/users/create'
+custom_types:
+  enums: []
+  input_objects: []
+  objects:
+  - name: CreateUserOutput
+  scalars: []
