@@ -22,7 +22,6 @@ fastify.post("/users/create", users_create)
   try {
     const port = 3000
     console.info(`Starting server on port ${port}`)
-
     // Start server
     await fastify.listen(port, "0.0.0.0")
   } catch (err) {

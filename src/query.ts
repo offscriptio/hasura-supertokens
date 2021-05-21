@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+import { GraphQLClient } from "graphql-request"
 
 function stringify(value) {
   if (value !== undefined) {
@@ -12,20 +12,15 @@ const query = async <T>(query: string, variables: object): Promise<T> => {
   /*
     Function to make a call to Hasura.
   */
-  const headers = {
-    "Content-Type": "application/json",
-    "Hasura-Client-Name": "hasura-supertokens",
-  }
-  headers["X-Hasura-Admin-Secret"] = process.env.HASURA_GRAPHQL_ADMIN_SECRET
-  const fetchResponse = await fetch(process.env.HASURA_GRAPHQL_URL, {
-    method: "POST",
-    headers,
-    body: stringify({
-      query,
-      variables,
-    }),
+  const endpoint = process.env.HASURA_GRAPHQL_URL as string
+  const graphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      "X-Hasura-Admin-Secret": process.env
+        .HASURA_GRAPHQL_ADMIN_SECRET as string,
+      "Hasura-Client-Name": "hasura-supertokens",
+    },
   })
-  const result = await fetchResponse.json()
+  const result = await graphQLClient.request(query, variables)
   if (result.errors) {
     throw stringify(result.errors)
   }
