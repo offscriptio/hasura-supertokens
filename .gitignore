@@ -6,3 +6,12 @@
 .yarnrc
 node_modules
 yarn-error.log
+
+# yarn 2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
