@@ -16,7 +16,7 @@ COPY package*.json ./
 COPY yarn.lock ./
 COPY yarnclean ./.yarnclean
 
-RUN yarn install --frozen-lockfile && yarn autoclean --force
+RUN yarn install && yarn autoclean --force
 
 # Bundle app source
 COPY .build ./
