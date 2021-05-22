@@ -41,8 +41,8 @@ curl --location --request POST 'http://localhost:3000/users/create' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "input": {
-        "id": "gus@offscript.io",
-        "email": "gus@offscript.io"
+        "id": "user@yld.oi",
+        "email": "user@yld.oi"
     }
 }'
 ```
