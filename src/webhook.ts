@@ -15,7 +15,7 @@ interface Body {
   headers: {
     "x-hasura-user-id": string
     "x-hasura-session-handle"?: string
-    "x-hasura-user-role"?: string
+    "x-hasura-role"?: string
   }
 }
 
@@ -50,7 +50,7 @@ const index = async (
     // Checks for if, in none, it's anonymous
     if (id) {
       const handle = eventObject.headers["x-hasura-session-handle"]
-      const request_role = eventObject.headers["x-hasura-user-role"]
+      const request_role = eventObject.headers["x-hasura-role"]
       const { users } = await query<GetUserQuery>(GetUser, { id })
       // Check if user is found, is none, it's anonymous
       if (users[0]) {

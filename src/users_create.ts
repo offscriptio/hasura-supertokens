@@ -14,17 +14,24 @@ const index = async (
   request: FastifyRequest,
   reply: FastifyReply
 ): Promise<void> => {
-  const eventObject = request.body as Body
-  const {
-    input: { email, id },
-  } = eventObject
-  const [InsertUser] = await loadFiles("lib/graphql/insert.graphql")
-  const { insert_users_one } = await query<InsertUserMutation>(InsertUser, {
-    email,
-    id,
-  })
-  const response = { id: insert_users_one.id }
-  reply.send(response)
+  try {
+    const eventObject = request.body as Body
+    const {
+      input: { email, id },
+    } = eventObject
+    const [InsertUser] = await loadFiles("lib/graphql/insert.graphql")
+    const response = await query<InsertUserMutation>(InsertUser, {
+      email,
+      id,
+    })
+    if (!response || !response.insert_users_one.id)
+      throw new Error("Something went wrong")
+    reply.send(response.insert_users_one.id)
+  } catch (err) {
+    console.error(err)
+    reply.statusCode = 500
+    reply.send("Error")
+  }
 }
 
 export default index
