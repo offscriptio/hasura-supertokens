@@ -4082,8 +4082,8 @@ subscriptions-transport-ws@^0.9.18:
     ws "^5.2.0"
 
 supertokens-node@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-5.0.1.tgz#f56ad2faaca2726275c44323530420ad58c697e3"
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-5.1.0.tgz#df04d74d4da2d18015956d7284c61518f6787622"
   dependencies:
     axios "0.21.1"
     body-parser "1.19.0"
