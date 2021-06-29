@@ -911,8 +911,8 @@
     form-data "^3.0.0"
 
 "@types/node@*", "@types/node@^15.6.0":
-  version "15.12.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.4.tgz#e1cf817d70a1e118e81922c4ff6683ce9d422e26"
+  version "15.12.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.12.5.tgz#9a78318a45d75c9523d2396131bd3cca54b2d185"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
