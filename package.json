@@ -22,14 +22,14 @@
     "graphql": "^15.5.3",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
     "fastify": "^3.21.0",
     "graphql-request": "^3.5.0",
     "node-fetch": "^3.0.0",
-    "supertokens-node": "^5.0.1"
+    "supertokens-node": "^7.0.1"
   },
   "scripts": {
     "build": "yarn esbuild src/index.ts --minify --platform=node --target=node14 --bundle --outdir=.build --minify --sourcemap",
