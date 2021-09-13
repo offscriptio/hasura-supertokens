@@ -1,10 +1,8 @@
 import * as supertokens from "supertokens-node"
 import * as Session from "supertokens-node/recipe/session"
 import { FastifyRequest, FastifyReply } from "fastify"
-import { GetUserQuery } from "lib/@types/graphql"
+import { GetUserDocument, GetUserQuery } from "lib/@types/graphql"
 import { query } from "./query"
-
-import { loadFiles } from "@graphql-tools/load-files"
 
 interface User {
   "x-hasura-role": string
@@ -24,7 +22,6 @@ const index = async (
   reply: FastifyReply
 ): Promise<void> => {
   const eventObject = request.body as Body
-  const [GetUser] = await loadFiles("lib/graphql/get.graphql")
   // Init supertokens
   supertokens.init({
     supertokens: {
@@ -51,16 +48,17 @@ const index = async (
     if (id) {
       const handle = eventObject.headers["x-hasura-session-handle"]
       const request_role = eventObject.headers["x-hasura-role"]
-      const { users } = await query<GetUserQuery>(GetUser, { id })
+      const { users } = await query<GetUserQuery>(GetUserDocument, { id })
       // Check if user is found, is none, it's anonymous
       if (users[0]) {
+        // found user, get role
         const role = users[0].role
         const session = await Session.getAllSessionHandlesForUser(id)
         // Check if there is an existing session
         if (session.length > 0 || session.indexOf(handle) !== -1) {
           const hasuraVariables = {
             "x-hasura-role":
-              request_role !== "user" && request_role === role ? role : "user",
+              request_role !== "pawn" && request_role === role ? role : "pawn",
             "x-hasura-user-id": id,
           }
           response = hasuraVariables
@@ -68,7 +66,7 @@ const index = async (
       }
     }
   } catch (error) {
-    console.log(error)
+    console.error(error)
   } finally {
     reply.send(response)
   }

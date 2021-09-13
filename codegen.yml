@@ -9,6 +9,7 @@ generates:
     plugins:
       - "typescript"
       - "typescript-operations"
+      - "typescript-generic-sdk"
     config:
       scalars:
         json: object
@@ -21,3 +22,6 @@ generates:
         numeric: number
       skipTypename: true
       withComponent: false
+      inlineFragmentTypes: combine
+      declarationKind:
+        input: "interface"

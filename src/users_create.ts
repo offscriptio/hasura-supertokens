@@ -1,6 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify"
-import { loadFiles } from "@graphql-tools/load-files"
-import { InsertUserMutation } from "lib/@types/graphql"
+import { InsertUserDocument, InsertUserMutation } from "lib/@types/graphql"
 import { query } from "./query"
 
 interface Body {
@@ -19,14 +18,14 @@ const index = async (
     const {
       input: { email, id },
     } = eventObject
-    const [InsertUser] = await loadFiles("lib/graphql/insert.graphql")
-    const response = await query<InsertUserMutation>(InsertUser, {
+    const response = await query<InsertUserMutation>(InsertUserDocument, {
       email,
       id,
     })
     if (!response || !response.insert_users_one.id)
       throw new Error("Something went wrong")
-    reply.send(response.insert_users_one.id)
+    const res_id = response.insert_users_one.id
+    reply.send({ id: res_id })
   } catch (err) {
     console.error(err)
     reply.statusCode = 500

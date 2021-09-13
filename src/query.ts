@@ -1,3 +1,4 @@
+import { DocumentNode } from "graphql"
 import { GraphQLClient } from "graphql-request"
 
 const stringify = (value: unknown) => {
@@ -15,7 +16,10 @@ const stringify = (value: unknown) => {
  * @param variables - Any variables needed to pass
  * @return - The result of the operation
  */
-const query = async <Type>(query: string, variables: object): Promise<Type> => {
+const query = async <Type>(
+  query: DocumentNode,
+  variables: object
+): Promise<Type> => {
   try {
     const endpoint = process.env.HASURA_GRAPHQL_URL as string
     const secret = process.env.HASURA_GRAPHQL_ADMIN_SECRET as string

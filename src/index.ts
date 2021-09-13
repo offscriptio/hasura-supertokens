@@ -4,7 +4,6 @@ import Fastify, { FastifyInstance } from "fastify"
 import webhook from "./webhook"
 import status from "./status"
 import users_create from "./users_create"
-import fetch from "node-fetch"
 
 // Configs
 dotenv.config()
