@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify"
-import { InsertUserDocument, InsertUserMutation } from "lib/@types/graphql"
+import { InsertUserDocument, InsertUserMutation } from "../lib/graphql"
 import { query } from "./query"
 
 interface Body {

@@ -1,7 +1,7 @@
 import * as supertokens from "supertokens-node"
 import * as Session from "supertokens-node/recipe/session"
 import { FastifyRequest, FastifyReply } from "fastify"
-import { GetUserDocument, GetUserQuery } from "lib/@types/graphql"
+import { GetUserDocument, GetUserQuery } from "../lib/graphql"
 import { query } from "./query"
 
 interface User {
