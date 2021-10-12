@@ -1993,8 +1993,8 @@ fastify-warning@^0.2.0:
   resolved "https://registry.yarnpkg.com/fastify-warning/-/fastify-warning-0.2.0.tgz#e717776026a4493dc9a2befa44db6d17f618008f"
 
 fastify@^3.21.0:
-  version "3.21.0"
-  resolved "https://registry.yarnpkg.com/fastify/-/fastify-3.21.0.tgz#c732b58ffec74f885d1dc6b7b1a993288dfea9d6"
+  version "3.22.0"
+  resolved "https://registry.yarnpkg.com/fastify/-/fastify-3.22.0.tgz#c8d265f0117762c0139fb0b567e815165e02a5e1"
   dependencies:
     "@fastify/ajv-compiler" "^1.0.0"
     abstract-logging "^2.0.0"
