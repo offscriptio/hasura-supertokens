@@ -499,8 +499,8 @@
     tslib "~2.3.0"
 
 "@graphql-codegen/typescript-operations@^2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-operations/-/typescript-operations-2.1.4.tgz#4cc093188abd4da573ee882b6a1c300523b69e97"
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript-operations/-/typescript-operations-2.1.6.tgz#d5c26300101e73f8c67c4689781c3556565f0d84"
   dependencies:
     "@graphql-codegen/plugin-helpers" "^2.1.1"
     "@graphql-codegen/typescript" "^2.2.2"
@@ -1082,11 +1082,11 @@ avvio@^7.1.2:
     fastq "^1.6.1"
     queue-microtask "^1.1.2"
 
-axios@0.21.1:
-  version "0.21.1"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+axios@0.21.4:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   dependencies:
-    follow-redirects "^1.10.0"
+    follow-redirects "^1.14.0"
 
 babel-plugin-dynamic-import-node@^2.3.3:
   version "2.3.3"
@@ -1386,7 +1386,7 @@ clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
-co-body@^6.1.0:
+co-body@6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/co-body/-/co-body-6.1.0.tgz#d87a8efc3564f9bfe3aced8ef5cd04c7a8766547"
   dependencies:
@@ -1702,8 +1702,8 @@ es-to-primitive@^1.2.1:
     is-symbol "^1.0.2"
 
 esbuild@^0.12.27:
-  version "0.12.28"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.28.tgz#84da0d2a0d0dee181281545271e0d65cf6fab1ef"
+  version "0.12.29"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.29.tgz#be602db7c4dc78944a9dbde0d1ea19d36c1f882d"
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -2085,9 +2085,9 @@ flatted@^3.1.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.2.tgz#64bfed5cb68fe3ca78b3eb214ad97b63bedce561"
 
-follow-redirects@^1.10.0:
-  version "1.14.3"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.3.tgz#6ada78118d8d24caee595595accdc0ac6abd022e"
+follow-redirects@^1.14.0:
+  version "1.14.4"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
 
 form-data@4.0.0:
   version "4.0.0"
@@ -3970,12 +3970,12 @@ subscriptions-transport-ws@^0.10.0:
     ws "^5.2.0 || ^6.0.0 || ^7.0.0"
 
 supertokens-node@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-7.0.1.tgz#68a8c6e7024220e0ae267ce61963b91488d23cab"
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/supertokens-node/-/supertokens-node-7.2.1.tgz#2689d84a5a6f9918cf15d65f4e5d4332392e2466"
   dependencies:
-    axios "0.21.1"
+    axios "0.21.4"
     body-parser "1.19.0"
-    co-body "^6.1.0"
+    co-body "6.1.0"
     cookie "0.4.0"
     jsonschema "1.4.0"
     jsonwebtoken "8.5.1"
